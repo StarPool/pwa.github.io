@@ -25,8 +25,8 @@ SQR.reader = (() => {
         const code = jsQR(imageData.data, canvas.width, canvas.height)
 
         if (code) {
-            SQR.modal.open(code.data)
-            //SQR.modal.open(Encoding.codeToString(Encoding.convert(code.binaryData, {to:'UNICODE', from:'SJIS'})));
+            //SQR.modal.open(code.data)
+            SQR.modal.open(Encoding.codeToString(Encoding.convert(code.data, {to:'UNICODE', from:'SJIS'})));
         } else {
             setTimeout(checkQRUseLibrary, 200)
         }
