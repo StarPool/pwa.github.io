@@ -10,7 +10,7 @@ workbox.routing.registerRoute(
     new workbox.strategies.StaleWhileRevalidate({
         cacheName: 'assets',
         plugins: [
-            new workbox.expiration.Plugin({
+            new workbox.expiration.ExpirationPlugin({
                 maxEntries: 20
             }),
         ],
